@@ -11,10 +11,10 @@ function domain() {
             //       console.log(pronoun[i]+adj[j])
             for (k = 0; k < noun.length; k++) {
                 // console.log(pronoun[i] + adj[j] + noun[k] + ".com");
-                names.push(pronoun[i] + adj[j] + noun[k] + ".com<br>")
-                
+                let newText = document.createElement('P')
+                newText.innerText = pronoun[i] + adj[j] + noun[k] + ".com"
+                document.getElementById('demo').appendChild(newText)
             }
         }
-    } document.getElementById('demo').innerHTML = names
-
+    }
 }
